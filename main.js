@@ -1,9 +1,12 @@
 var app = require('app');
 var BrowserWindow = require('browser-window');
+var update = require('git-updater');
 
 require('crash-reporter').start();
 
 var mainWindow = null;
+
+update()
 
 app.on('window-all-closed', function() {
   if (process.platform != 'darwin')
